@@ -7,7 +7,7 @@ IBM Cloud Privateは、コンテナ化されたアプリケーションの開発
 # IBM Cloud Private の概要
 IBM Cloud Private（ICP）は、コンテナ化されたアプリケーションの開発、編成、および管理を行うためのアプリケーション・プラットフォームです。 
 このチュートリアルのトライアル環境を利用することで、Kubernetesの概念を学び、クラウドネイティブ・アプリケーションの展開と管理を開始するのに役立ちます。
-![ICP全体像](https://github.com/ICpTrial/ICPTrialJapan/blob/master/pictures/README/icpoverview.png)
+![ICP全体像](https://github.com/ICpTrial/ICPTrialJapan/blob/master/picutes/README/icpoverview.png)
 
 ICPは Kubernetesのアプリケーション開発の選択肢をサポートしています。以下の利点があります。
 * マイクロサービス・ベース・アプリケーションを作成するための、マルチテナント・コンテナーとKubernetesベースのオーケストレーション
