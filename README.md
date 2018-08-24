@@ -16,7 +16,6 @@ ICPは Kubernetesのアプリケーション開発の選択肢をサポートし
 * アプリケーションの隔離とセキュリティのためのネットワークとクラウドストレージポリシーベースのコントロール
 * 自動化されたアプリケーション健全性チェックと障害からの回復
 
-
 ## チュートリアル・コンテンツ
 ### [トライアル環境の準備](https://github.com/ICpTrial/ICPTrialJapan/blob/master/reserve.md)
 ### [トライアル環境の詳細](https://github.com/ICpTrial/ICPTrialJapan/blob/master/environemnt.md)
