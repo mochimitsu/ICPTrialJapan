@@ -23,7 +23,7 @@ ICPは Kubernetesのアプリケーション開発の選択肢をサポートし
 コンソール：Firefoxブラウザを開き、IBMCloudPrivateConsoleブックマークをクリックします。ユーザーIDはadmin、パスワードはicp1nCl0udです。
 CommandLine：ターミナルウィンドウを開き、tools / kubcli.sh <userid> <password>を実行します。その後、kubectlコマンドの実行を開始することができます
 
-# トライアル環境の詳細
+# トライアル環境の詳細 https://github.com/ICpTrial/ICPTrialJapan/blob/master/icpoverview.md
 
 
 # ICPクラスタの詳細
