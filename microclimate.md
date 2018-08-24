@@ -13,7 +13,7 @@ Mircoclimateは、現在Java、Node.js、およびSwiftをサポートしてい�
 ## Micoclimateへのアクセス方法
 icpmasterノードの試用版のLinuxデスクトップでfirefoxブラウザを開き、Microclimateブックマークをクリックします。
 
-または、ブラウザの新しいタブで、URL https://microclimate.10.0.0.1.nip.ioを使用します。
+または、ブラウザの新しいタブで、URL https://microclimate.10.0.0.1.nip.io を使用します。
 HowTosへのリンクは次のとおりです
 * [Mricorliamteを使う](https://microclimate-dev2ops.github.io/usingmicroclimate)
 * [プロジェクトのインポート](https://microclimate-dev2ops.github.io/projectimport)
