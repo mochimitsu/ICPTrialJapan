@@ -16,7 +16,6 @@ Kubernetes CLIベースのクエリや他の機能にアクセスする必要が
 ICPMasterノードのLinuxデスクトップを開きます。
 
 このLinuxデスクトップの中から、ICPにアクセスすることができます。
+  ![ICPMasterノード](https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/icpmaster.png)
 - コンソール：Firefoxブラウザを開き、IBMCloudPrivateConsoleブックマークをクリックします。ユーザーIDはadmin、パスワードはicp1nCl0udです。
 - CommandLine：ターミナルウィンドウを開き、tools / kubcli.sh <userid> <password>を実行します。その後、kubectlコマンドの実行を開始することができます
-  
-  ![ICPMasterノード](https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/icpmaster.png)
