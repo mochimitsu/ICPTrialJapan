@@ -11,6 +11,7 @@
 ![環境の開始](https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/startenv.png)
 1. ブラウザからのアクセス：ほとんどの機能については、ブラウザからICPコンソールを起動できます。ブラウザからICPコンソールにアクセスするためのURLは確認メールで送信されます。
 1. Linuxデスクトップ：Kubernetes 	cliベースのクエリや他の機能にアクセスする必要がある場合は、ICPMasterノードをクリックします。これは、ICPMasterノードのLinuxデスクトップを開きます。
+![ICPMasterノード](https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/icpmaster.png)
 このデスクトップの中から、ICPにアクセスすることができます。
 コンソール：Firefoxブラウザを開き、IBMCloudPrivateConsoleブックマークをクリックします。ユーザーIDはadmin、パスワードはicp1nCl0udです。
 CommandLine：ターミナルウィンドウを開き、tools / kubcli.sh <userid> <password>を実行します。その後、kubectlコマンドの実行を開始することができます
