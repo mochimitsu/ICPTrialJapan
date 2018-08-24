@@ -9,9 +9,14 @@
 1. 予約フォームを完了して数分後、予約した環境に関する指示が記載された電子メールを受信トレイで確認してください。指示に従って、インスタンスにログインします。
 1. 初めて自分の環境にログインすると、VMがサスペンドされていることもあります。開始するには、右上隅の再生アイコンをクリックします。最初に環境を始動するときにIBM Cloud Privateが完全に開始されるまでには10〜15分かかります。
 ![環境の開始](https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/startenv.png)
-1. ブラウザからのアクセス：ほとんどの機能については、ブラウザからICPコンソールを起動できます。ブラウザからICPコンソールにアクセスするためのURLは確認メールで送信されます。
-1. Linuxデスクトップ：Kubernetes 	cliベースのクエリや他の機能にアクセスする必要がある場合は、ICPMasterノードをクリックします。これは、ICPMasterノードのLinuxデスクトップを開きます。
-![ICPMasterノード](https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/icpmaster.png)
-このデスクトップの中から、ICPにアクセスすることができます。
-コンソール：Firefoxブラウザを開き、IBMCloudPrivateConsoleブックマークをクリックします。ユーザーIDはadmin、パスワードはicp1nCl0udです。
-CommandLine：ターミナルウィンドウを開き、tools / kubcli.sh <userid> <password>を実行します。その後、kubectlコマンドの実行を開始することができます
+1. ブラウザからのアクセス
+ほとんどの機能については、ブラウザからICPコンソールを起動できます。ブラウザからICPコンソールにアクセスするためのURLは確認メールで送信されます。
+1. Linuxデスクトップ
+Kubernetes CLIベースのクエリや他の機能にアクセスする必要がある場合は、ICPMasterノードをクリックします。
+ICPMasterノードのLinuxデスクトップを開きます。
+
+このLinuxデスクトップの中から、ICPにアクセスすることができます。
+- コンソール：Firefoxブラウザを開き、IBMCloudPrivateConsoleブックマークをクリックします。ユーザーIDはadmin、パスワードはicp1nCl0udです。
+- CommandLine：ターミナルウィンドウを開き、tools / kubcli.sh <userid> <password>を実行します。その後、kubectlコマンドの実行を開始することができます
+  
+  ![ICPMasterノード](https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/icpmaster.png)
