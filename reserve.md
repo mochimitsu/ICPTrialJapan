@@ -8,7 +8,7 @@
 
 1. 予約フォームを完了して数分後、予約した環境に関する指示が記載された電子メールを受信トレイで確認してください。指示に従って、インスタンスにログインします。
 1. 初めて自分の環境にログインすると、VMがサスペンドされていることもあります。開始するには、右上隅の再生アイコンをクリックします。最初に環境を始動するときにIBM Cloud Privateが完全に開始されるまでには10〜15分かかります。
-!https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/startenv.png
+![環境の開始](https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/startenv.png)
 1. ブラウザからのアクセス：ほとんどの機能については、ブラウザからICPコンソールを起動できます。ブラウザからICPコンソールにアクセスするためのURLは確認メールで送信されます。
 1. Linuxデスクトップ：Kubernetes 	cliベースのクエリや他の機能にアクセスする必要がある場合は、ICPMasterノードをクリックします。これは、ICPMasterノードのLinuxデスクトップを開きます。
 このデスクトップの中から、ICPにアクセスすることができます。
