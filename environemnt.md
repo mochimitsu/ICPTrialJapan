@@ -1,11 +1,10 @@
 # ICPトライアル環境の詳細
 トライアル環境のトポロジーは、以下から構成されます
-![トライアル環境トポロジー](https://github.com/ICpTrial/ICPTrialJapan/blob/master/pictures/trialtopology.png)
-* マスター/プロキシノード（同居）
+* マスター/プロキシノード（兼ブート・ノード）
 * 2つのワーカーノード
 * 1つの管理ノード
 * 1つの脆弱性アドバイザー・ノード
-
+![トライアル環境トポロジー](https://github.com/ICpTrial/ICPTrialJapan/blob/master/pictures/trialtopology.png)
 
 ### 各ノードの役割
 |ノード名|役割|
