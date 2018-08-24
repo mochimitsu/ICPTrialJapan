@@ -4,6 +4,7 @@
 * 2つのワーカーノード
 * 1つの管理ノード
 * 1つの脆弱性アドバイザー・ノード
+
 ![トライアル環境トポロジー](https://github.com/ICpTrial/ICPTrialJapan/blob/master/pictures/trialtopology.png)
 
 ### 各ノードの役割
