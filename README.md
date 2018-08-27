@@ -21,7 +21,7 @@ ICPは Kubernetesのアプリケーション開発の選択肢をサポートし
 ### [トライアル環境の準備](https://github.com/ICpTrial/ICPTrialJapan/blob/master/reserve.md)
 ### [トライアル環境の詳細](https://github.com/ICpTrial/ICPTrialJapan/blob/master/environemnt.md)
 ### [Mircoclimate](https://github.com/ICpTrial/ICPTrialJapan/blob/master/microclimate.md)
-### [サンプルマイクロサービスアプリケーション](https://github.com/ICpTrial/ICPTrialJapan/blob/master/samplemicroservice.md)
+### [サンプル・マイクロサービス・アプリケーション](https://github.com/ICpTrial/ICPTrialJapan/blob/master/samplemicroservice.md)
 ### [LDAPとの統合](https://github.com/ICpTrial/ICPTrialJapan/blob/master/ldapintegrntion.md)
 ### [モニタリング](https://github.com/ICpTrial/ICPTrialJapan/blob/master/monitoring.md)
 ### [ロギング](https://github.com/ICpTrial/ICPTrialJapan/blob/master/logging.md)
