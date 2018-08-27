@@ -5,7 +5,7 @@ ICPクラスタ監視ダッシュボードを使用して、ICPクラスタと�
 
 
 ## Prometheus
-![PromethuesLogo](https://www.cncf.io/wp-content/uploads/2018/02/prometheus-stacked-color.png)
+![PromethuesLogo](https://www.cncf.io/wp-content/uploads/2018/02/prometheus-stacked-color.png) <br>
 Prometheus は、元々SoundCloudで構築されたオープンソースのシステム監視とアラート・ツールキットです。プロメテウスは、2016年にCNCFに、Kubernetesにつづく2のホストプロジェクトとして加わりました。ほとんどのPrometheusコンポーネントはGoで書かれており、静的なバイナリとして簡単にビルドおよびデプロイできます。
 
 プロメテウスは、以下のコンポーネントから構成されます。
@@ -16,7 +16,6 @@ Prometheus は、元々SoundCloudで構築されたオープンソースのシ�
 ![Prometheus Architecture](https://prometheus.io/assets/architecture-cb2ada1ece6.png)
 
 ## Grafana
-![GrafanaLogo](https://landscape.cncf.io/logos/grafana.svg)
 1. Grafanaは、Prometheusデータベースに格納されているメトリックを視覚化する視覚化レイヤーです。
 Prometheusサーバーに直接PromQLクエリを書く代わりに、Grafana UIボードを使用してPrometheusサーバーからメトリックをクエリし、Grafana Dashboardで視覚化することができます。ダッシュボードにアクセスするには、ブラウザで新しいタブを開き、Grafanaのブックマークをクリックします
 
