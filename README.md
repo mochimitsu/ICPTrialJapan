@@ -28,6 +28,6 @@ ICPは Kubernetesのアプリケーション開発の選択肢をサポートし
 ### [Istio](https://github.com/ICpTrial/ICPTrialJapan/blob/master/istio.md)
 ### [Kubernetes運用ビュー](https://github.com/ICpTrial/ICPTrialJapan/blob/master/operationalview.md)
 ### [ウィーブスコープ](https://github.com/ICpTrial/ICPTrialJapan/blob/master/weavescope.md)
-### [Linuxネットアプリケーションのサンプル](https://github.com/ICpTrial/ICPTrialJapan/blob/master/dotnetapplication.md)
+### [Linux .Netアプリケーションのサンプル](https://github.com/ICpTrial/ICPTrialJapan/blob/master/dotnetapplication.md)
 ### [ICP コミュニティ・サポート](https://github.com/ICpTrial/ICPTrialJapan/blob/master/communitysupport.md)
 ### [まとめ](https://github.com/ICpTrial/ICPTrialJapan/blob/master/summary.md)
