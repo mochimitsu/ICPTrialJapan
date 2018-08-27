@@ -1,18 +1,22 @@
 # LDAPとの統合
-Openldapサーバは環境に配備され、LDAP認証を提供するために使用されます。 ldapサーバーには、サンプルユーザーとグループがほとんどありませんでした。このシナリオでは、ldapサーバーをICPに接続し、ldapサーバーのユーザー/グループを追加して役割ベースのアクセスを実現します。 LDAPサーバーのサンプルユーザーとグループは、次のとおりです。
+この環境には、OpenLdapサーバがすでにデプロイされおり、LDAP認証を提供するために使用されます。 ICPを導入した段階では、ユーザーとグループは、ほとんど定義されていません（superuserである adminのみです）。
+このシナリオでは、LDAPサーバーをICPに接続し、LDAPサーバーのユーザー/グループを追加して役割ベースのアクセスを実現します。 LDAPサーバーのサンプル・ユーザーとグループは、次のとおりです。
 ￼
- <source srcset = "https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/ldapgroupsandusers.webp" type = "image / webp"> <source srcset = "https：// ibm- dte.mybluemix.net/images/tutorials/cloud-private-trial/ldapgroupsandusers.png "type =" image / png "> <img src =" https://ibm-dte.mybluemix.net/images/tutorials/cloud -private-trial / ldapgroupsandusers.png "alt =" LDAPGroups＆amp; Users ">
+<source srcset="https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/ldapgroupsandusers.webp" type="image/webp">
+<source srcset="http://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/ldapgroupsandusers.png" type="image/png"> 
+<img src="https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/ldapgroupsandusers.png" alt="LDAPGroups&Users" >
 上記のすべてのユーザーのパスワードはicp1nCl0udです。
 
-## ICPとLDAPサーバーを接続する
-1. ldapサーバーとICPを接続するには、LDAPサーバーのアドレス、ベースドメイン、バインドユーザーID、バインドユーザーパスワード、ユーザーとグループのフィルターが必要です。
-1. kubectlを実行できるコマンドウィンドウを起動します。
-1. コマンドkubectl -n services svcを実行します。 grep myopenldapを実行して、ClusterIP 10.1.0.248kubectl -n services get svc | grep myopenldap
-* myopenldap ClusterIP 10.1.0.248 <なし> 389 / TCP、636 / TCP 1h
-*
-1. 同様に、以下のようにコマンドを実行し、LDAP管理者のパスワードを書き留めておきます。kubectl get secret --namespace services myopenldap -o jsonpath = "{。data.LDAP_ADMIN_PASSWORD}" | base64  - デコード;エコー
-* Si6O0hwBobyOoVBKoMnszIMedKRye39w
-*
+## ICPとLDAPサーバーを統合する
+1. LDAPサーバーとICPを統合するためには、LDAPサーバーのアドレス、ベースドメイン、バインド・ユーザーID、バインド・ユーザーパスワード、ユーザーとグループのフィルターが必要です。
+    1. kubectlを実行できるコマンド・ウィンドウを起動します。
+    1. コマンド *kubectl -n services svc |grep myopenldap* を実行して、ClusterIP をメモします(以下の例では 10.1.0.248です）。
+    `kubectl -n services get svc | grep myopenldap
+    myopenldap ClusterIP 10.1.0.248 <none> 389 / TCP、636 / TCP 1h`
+
+    1. 同様に、以下のコマンドを実行し、LDAP管理者のパスワードを書き留めておきます。
+    `kubectl get secret --namespace services myopenldap -o jsonpath="{.data.LDAP_ADMIN_PASSWORD}" | base64 --decode;echo
+    Si6O0hwBobyOoVBKoMnszIMedKRye39w`
 1. 以下の情報を使用して、ldapサーバーとICPクラスターを接続します。 ICPコンソールのナビゲーションメニュー - >管理 - >認証、LDAP接続を追加します。名前：OpenldapType：CustomBase DN：dc = bluedemos、dc = comBind DN：cn = admin、dc = bluedemos、dc = comAdminパスワード：Si6O0hwBobyOoVBKoMnszIMedKRye39wURL：ldap：//10.1.0.248：389
 1. [接続テスト]ボタンをクリックします。接続が正しい場合は、LDAP接続が成功したというメッセージが表示されます。
 1. 同様に、グループとユーザーのフィルタとグループとユーザーのマッピングには次の値を使用します
