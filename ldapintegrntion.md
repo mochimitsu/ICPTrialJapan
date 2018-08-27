@@ -21,25 +21,26 @@
     1. 以下の情報を使用して、LDAPサーバーとICPクラスターを統合します。
     ICPコンソールのナビゲーション・メニュー -> 管理 ->認証 と開き、LDAP接続を追加します。
 
-    |項目名|設定値|
-    |:--:|:--|
-    |Name|Openldap|
-    |Type|Custom|
-    |Base DN|dc=bluedemos,dc=com|
-    |Bind DN|cn=admin,dc=bluedemos,dc=com|
-    |Adminパスワード|Si6O0hwBobyOoVBKoMnszIMedKRye39w|
-    |URL|ldap://10.1.0.248:389|
-    
+        |項目名|設定値|
+        |:--:|:--|
+        |Name|Openldap|
+        |Type|Custom|
+        |Base DN|dc=bluedemos,dc=com|
+        |Bind DN|cn=admin,dc=bluedemos,dc=com|
+        |Adminパスワード|Si6O0hwBobyOoVBKoMnszIMedKRye39w|
+        |URL|ldap://10.1.0.248:389|    
     1. [接続テスト]ボタンをクリックします。接続が正しい場合は、LDAP接続が成功したというメッセージが表示されます。
-    1. 同様に、グループとユーザーのフィルタとグループとユーザーのマッピングには次の値を使用します
-    
-    |項目名|設定値|
-    |:--:|:--|
-    |グループ・フィルタ|(&(cn=％v)(objectclass=groupOfUniqueNames))|
-    |ユーザ・フィルタ|(&(cn =％v)(objectclass=inetOrgPerson))
-    |グループIDマップ|*：cn|
-    |ユーザーIDマップ|*：cn|
-    |グループ・メンバーIDマップ|groupOfUniqueNames:uniqueMember|
+    1. 同様に、グループとユーザーのフィルタとグループとユーザーのマッピングには次の値を使用します 
+  
+        |項目名|設定値|
+        |:--:|:--|
+        |グループ・フィルタ|(&(cn=％v)(objectclass=groupOfUniqueNames))|
+        |ユーザ・フィルタ|(&(cn =％v)(objectclass=inetOrgPerson))
+        |グループIDマップ|*：cn|
+        |ユーザーIDマップ|*：cn|
+        |グループ・メンバーIDマップ|groupOfUniqueNames:uniqueMember|
+
+![LDAP設定画面](https://ibm-dte.mybluemix.net/images/tutorials/cloud-private-trial/ldap-connection-test.png)
 
 
 ## ユーザーロール
