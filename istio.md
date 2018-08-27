@@ -1,6 +1,6 @@
 
 # Istio
-![IstioLogo](https://github.com/ICpTrial/ICPTrialJapan/tree/master/pictures/istio.png)
+![IstioLogo](https://github.com/ICpTrial/ICPTrialJapan/blob/master/pictures/istio.png)
 
 IBM、Google、Lyftの共同作業であるIstioは、マイクロサービス自体を変更することなく、複雑なタスクの多くを自動的に管理するサービスメッシュを簡単に作成する方法を提供します。 Istioは、以下の機能を提供します。
 
