@@ -1,6 +1,5 @@
 # ロギング
 ![ELKLogo](https://landscape.cncf.io/logos/elastic.svg)
-![
 ICPロギングでは、ロギングにElastic Search、Logging、Kibana（ELK）スタックを使用します。事前インストールされたELKスタックは、KubernetesとDockerを含むICP管理サービスのシステムログを収集します。デフォルトのELKスタックとFilebeatデーモン・セットは、デプロイされているコンテナ・ログを収集します。
 ICPでは、ユーザー・アプリケーション用のELKスタックをカタログから展開し、さらに多くのELKインスタンスを構成することができます。ICPでは展開されるELKスタックの数に制限はありません。
 
