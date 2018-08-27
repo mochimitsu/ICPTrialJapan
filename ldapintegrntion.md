@@ -10,14 +10,25 @@
 ## ICPとLDAPサーバーを統合する
 1. LDAPサーバーとICPを統合するためには、LDAPサーバーのアドレス、ベースドメイン、バインド・ユーザーID、バインド・ユーザーパスワード、ユーザーとグループのフィルターが必要です。
     1. kubectlを実行できるコマンド・ウィンドウを起動します。
-    1. コマンド *kubectl -n services svc |grep myopenldap* を実行して、ClusterIP をメモします(以下の例では 10.1.0.248です）。
-    `kubectl -n services get svc | grep myopenldap
-    myopenldap ClusterIP 10.1.0.248 <none> 389 / TCP、636 / TCP 1h`
+    1. コマンド *kubectl -n services svc |grep myopenldap* を実行して、ClusterIP をメモします(以下の例では 10.1.0.248です）。<br>
+    `kubectl -n services get svc | grep myopenldap` <br>
+    `myopenldap ClusterIP 10.1.0.248 <none> 389 / TCP、636 / TCP 1h`
 
-    1. 同様に、以下のコマンドを実行し、LDAP管理者のパスワードを書き留めておきます。
-    `kubectl get secret --namespace services myopenldap -o jsonpath="{.data.LDAP_ADMIN_PASSWORD}" | base64 --decode;echo
-    Si6O0hwBobyOoVBKoMnszIMedKRye39w`
-1. 以下の情報を使用して、ldapサーバーとICPクラスターを接続します。 ICPコンソールのナビゲーションメニュー - >管理 - >認証、LDAP接続を追加します。名前：OpenldapType：CustomBase DN：dc = bluedemos、dc = comBind DN：cn = admin、dc = bluedemos、dc = comAdminパスワード：Si6O0hwBobyOoVBKoMnszIMedKRye39wURL：ldap：//10.1.0.248：389
+    1. 同様に、以下のコマンドを実行し、LDAP管理者のパスワードを書き留めておきます。<br>
+    `kubectl get secret --namespace services myopenldap -o jsonpath="{.data.LDAP_ADMIN_PASSWORD}" | base64 --decode;echo`<br>
+    `Si6O0hwBobyOoVBKoMnszIMedKRye39w`
+
+    1. 以下の情報を使用して、LDAPサーバーとICPクラスターを統合します。
+    ICPコンソールのナビゲーションメニュー -> 管理 ->認証 と開き、LDAP接続を追加します。
+    |項目名|設定値|
+    |:--:|:--:|
+    |Name|Openldap|
+    |Type|Custom|
+    |Base DN|dc=bluedemos,dc=com|
+    |Bind DN|cn=admin,dc=bluedemos,dc=com|
+    |Adminパスワード|Si6O0hwBobyOoVBKoMnszIMedKRye39w|
+    |URL|ldap：//10.1.0.248：389|
+    
 1. [接続テスト]ボタンをクリックします。接続が正しい場合は、LDAP接続が成功したというメッセージが表示されます。
 1. 同様に、グループとユーザーのフィルタとグループとユーザーのマッピングには次の値を使用します
 グループフィルタ：（＆（cn =％v）（objectclass = groupOfUniqueNames））ユーザフィルタ：（＆（cn =％v）（objectclass = inetOrgPerson））グループIDマップ：*：cnユーザIDマップ：*：cnグループメンバーIDマップ：groupOfUniqueNames：uniqueMember
