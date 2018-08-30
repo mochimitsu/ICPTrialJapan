@@ -33,6 +33,7 @@ ICPは Kubernetesのアプリケーション開発の選択肢をサポートし
 ### [モニタリング](https://github.com/ICpTrial/ICPTrialJapan/blob/master/monitoring.md)
 ### [ロギング](https://github.com/ICpTrial/ICPTrialJapan/blob/master/logging.md)
 
+### [Cloud Automation Manager](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam.md)
 ### [Kubernetes運用ビュー](https://github.com/ICpTrial/ICPTrialJapan/blob/master/operationalview.md)
 ### [ウィーブスコープ](https://github.com/ICpTrial/ICPTrialJapan/blob/master/weavescope.md)
 ### [Linux .Netアプリケーションのサンプル](https://github.com/ICpTrial/ICPTrialJapan/blob/master/dotnetapplication.md)
