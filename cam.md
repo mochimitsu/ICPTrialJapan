@@ -51,11 +51,22 @@
 ## クラウド接続の定義（AWSを例に）
 1. CAMコンソールを Manage > Cloud Connections と開きます
 1. Create Connections をクリックします
- 1. Cloud Provider に Amazon EC2 を選択します
- 1. Cloud Connection に任意の名前を付けます
- 　　このあと設定する AccessID を鑑み、どの用途の環境か分かるようにしておくといいです
- 1. Description に 任意の備考を記載します (テスト用など）
- 1. AWS の 接続情報を設定します （Access Key ID, Secret Access Key)
- 1. リージョンには Asia Pacific (Tokyo) Region をハンズオンでは選びます
+   1. Cloud Provider に Amazon EC2 を選択します（ここで選択した値により、詳細設定項目は変わります）
+   1. Cloud Connection に任意の名前を付けます<br>
+   このあと設定する AccessID を鑑み、どの用途の環境か分かるようにしておくといいです
+   1. Description に 任意の備考を記載します (テスト用など）
+   1. AWS の 接続情報を設定します （Access Key ID, Secret Access Key)
+   1. リージョンには Asia Pacific (Tokyo) Region をハンズオンでは選びます
+ 
+## カスタム・テンプレートの作成（ソースコード CAMローカル管理）
+1. CAMコンソールから Library > Template を選択します
+1. Create Template をクリックします
+   1. From Scratch を選択します
+   1. 設定として、以下を記載します
+     |Name| AWS-SimpleVM-Scratch|
+     |Description|AWS上に、シンプルなVM環境を払出します。TerraformコードをCAM上で管理します|
+     |Cloud Provider|AWS EC2|
+1. Template Metadata を以下のように記載します
+   
   
   
