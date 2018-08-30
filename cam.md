@@ -31,21 +31,31 @@
 1. HELM構成パラメータの指定
 
   構成
+  
+
   |パラメータ名前|設定値|
-  |*-----*|-----|
+  |:-----:|:-----|
   |リリース名| 任意の名前 |
   |ターゲット名前空間| sevices |
   |使用条件への同意| ライセンスを確認して同意してください |
   
   グローバル
+  
   |パラメータ名前|設定値|
-  |*-----*|-----|
+  |:-----:|:-----|
   |Image pull secret name| 任 |
   |Deploy API key| |
   
 1. HELMのデプロイが完了するのを待ちます
 
-## クラウド接続の定義
-1. CAMコンソールを Manage > Cloud Connections と開き、
+## クラウド接続の定義（AWSを例に）
+1. CAMコンソールを Manage > Cloud Connections と開きます
+1. Create Connections をクリックします
+ 1. Cloud Provider に Amazon EC2 を選択します
+ 1. Cloud Connection に任意の名前を付けます
+ 　　このあと設定する AccessID を鑑み、どの用途の環境か分かるようにしておくといいです
+ 1. Description に 任意の備考を記載します (テスト用など）
+ 1. AWS の 接続情報を設定します （Access Key ID, Secret Access Key)
+ 1. リージョンには Asia Pacific (Tokyo) Region をハンズオンでは選びます
   
   
