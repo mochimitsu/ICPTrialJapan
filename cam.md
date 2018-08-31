@@ -12,7 +12,7 @@
   *docker login mycluster.icp:8500*
     
 1. HELMカタログへの製品イメージの登録<br>
-  *bx pr load-ppa-archive --archive icp-cam-x86_64-2.1.0.3_06-27.tar.gz --clustername mycluster.icp --namespace services
+  *bx pr load-ppa-archive --archive icp-cam-x86_64-2.1.0.3_06-27.tar.gz --clustername mycluster.icp --namespace services*
   
 1. HELMカタログの同期<br>
   ICPコンソールから「管理」> 「リポジトリー」を開き、「リポジトリーの同期」をクリックします。
