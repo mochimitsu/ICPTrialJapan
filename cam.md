@@ -41,7 +41,7 @@
   1. kubectl create -f <xxxxx-pv.yaml> でも PersitenceVolumeを生成することが可能です
 
 ## Service ID API Key の生成
-1. OSの Terminal を開き、 [SErvice ID API Keyの生成](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_install_offline_EE.html) の手順で、Service ID API Keyを生成します。
+1. OSの Terminal を開き、 [Service ID API Keyの生成](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_install_offline_EE.html) の手順で、Service ID API Keyを生成します。
  
 ## CAM導入 
 1. HELMカタログにおいて、導入HELMチャートを選択します
@@ -50,22 +50,23 @@
   
 1. 導入時にHELM構成パラメータを指定します。指定されたもの以外は デフォルト値のままで問題ありません。
 
-  構成
-  |パラメータ名前|設定値|
-  |:-----:|:-----|
-  |リリース名| 任意の名前 |
-  |ターゲット名前空間| Services |
-  |使用条件への同意| ライセンスを確認して同意してください |
+      構成
+
+      |パラメータ名前|設定値|
+      |:-----:|:-----|
+      |リリース名|任意の名前|
+      |ターゲット名前空間|Services|
+      |使用条件への同意|ライセンスを確認して同意してください|
+
+      グローバル
+
+      |パラメータ名前|設定値|
+      |:-----:|:-----|
+      |Image pull secret name|default|
+      |Product Identifier|既に指定されている場合にはデフォルトのままで問題ありません。指定されていない場合は、Product IDファイル（icp-cam-prod-id-2.1.0.3_06-27.txt）に記載されている内容をCOPY&PASTEします
+      |Deploy API key|Service ID API Keyの手順で生成したKeyを指定します|
   
-  グローバル
-  |パラメータ名前|設定値|
-  |:-----:|:-----|
-  |Image pull secret name|default|
-  |Product Identifier|既に指定されている場合にはデフォルトのままで問題ありません。指定されていない場合は、Product IDファイル（icp-cam-prod-id-2.1.0.3_06-27.txt）に記載されている内容をCOPY&PASTEします
-  |Deploy API key|Service ID API Keyの手順で生成したKeyを指定します|
-  
-1. HELMのデプロイが完了するのを待ちます
-  1. ICPコンソールから HELM リリースを開きます
+  1. HELMのデプロイが成功したことをを確認します。ICPコンソールから HELM リリースを開きます
   1. デプロイメント に含まれている CAMのマイクロサービスの各デプロイメントが Running ステータスとなっていることを確認します
   1. Running となっていないデプロイメントが存在する場合は、当該デプロイメントのリンクをクリックし開きます。
      各デプロイメントのページの下にある Pod のリンクを開き、Event および Logs を確認し、正常稼働の妨げになっている事象を確認します
