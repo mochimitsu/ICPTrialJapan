@@ -22,6 +22,7 @@
     
 ## CAM導入事前準備
 1. CAMの導入の前提となる PersistentVolume を４つ作成します。
+
      |pv名|用途|
      |:-----:|:-----|
      |cam-mongo-pv|CAMのデータが配置されるPersitenceVolume|
