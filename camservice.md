@@ -31,3 +31,6 @@
     この例では、FREEPLANでは梅構成しか選べないようにしていますが、東京DCプラン、米国DC用プランと分けるなど、１つのService Composition を様々なプランに分けて構成することができます。
        ![サービスのプラン](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/serviceplan.png)
       
+
+最後に TerraformテンプレートのGUI開発ツールである BluePrint Designer を見てみましょう [CAMの利用３](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cambpd.md)
+       
