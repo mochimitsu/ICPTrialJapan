@@ -101,7 +101,7 @@ NFSサーバーのIPアドレスとパスを書き換えて「作成」をクリ
      
     ![CreateTemplate](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/CreateTemplate.png)
     
-1. Template Metadata を以下のように記載します
+1. Template Metadata を以下のように記載し、保存します。
 
      |パラメータ名前|設定値|
      |:-----:|:-----|
