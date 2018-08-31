@@ -8,7 +8,7 @@
 1. サービスの定義画面が開きます。通常はテンプレートの時と同様１つずつ開発を行っていきますが、ハンズオンでの作業効率化のため既に定義が行われたソースを読み込みペーストします。
    [定義済みファイル](https://raw.githubusercontent.com/ICpTrial/ICPTrialJapan/master/cam/service/awsvmdeployservice.yaml) をクリックして内容をコピーします。
 1. 定義画面の Source Code を選択し、コピーした内容を貼り付け、一旦保管します。
-   [!サービスのインポート](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/ServiceImport.png)
+   ![サービスのインポート](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/ServiceImport.png)
 
 
 ## インポートしたサービスの確認
