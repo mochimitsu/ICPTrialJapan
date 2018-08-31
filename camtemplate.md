@@ -69,10 +69,9 @@
        |azs|Availability Zone|
    
    1. 「Deploy」をクリックします。インスタンスのデプロイが開始されますので、デプロイの状況を確認します。
-   
-       <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/deployment.png" title="SampleTemplate" width="400">
-       <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/deploysuccess.png" title="SampleTemplate" width="400">
-   
+       ![デプロイ中](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/deployment.png)
+       ![デプロイ完了](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/deploysuccess.png)
+       
    1. デプロイに失敗した場合は「Log File」タブを確認し、Terraformが出力するメッセージを確認してください。
       パラメータの誤りであれば「Modify」タブをクリックして、Edit Parameters でパラメータを更新し、Applyし再度デプロイしてください。
    
