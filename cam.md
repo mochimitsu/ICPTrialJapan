@@ -114,11 +114,15 @@ NFSサーバーのIPアドレスとパスを書き換えて「作成」をクリ
 1. Manage Template タブを開きます 
     1. Edit Version タブで、*Add your template source code here* をクリックします。
     1. Display Name は V1.0.0 の ままで OKです（任意に変えて頂いても問題ありません）
-    1. AWS用のサンプル・テンプレートとして、以下のURLを指定します。
+    1. AWS用のサンプル・テンプレートとして、以下のURLを指定し、Uploadをクリックします。
     `https://raw.githubusercontent.com/ICpTrial/ICPTrialJapan/master/cam/template/aswsimple.tf`
-    1. Terraformソース内の Subnet や SecurityGroup IDなどは 各自の環境にあわせて修正し、保存します。
+    1. Terraformソース内の Subnet や SecurityGroup IDなどは 各自の環境にあわせて修正し、追加します。
    <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/TemplateSource.png" title="SampleTemplate" width="400">
-   
+    1. 一旦、右上の「Save]をクリックして、テンプレートを保存します。
+    1. "Update Parameters" をクリックします。インポート・タイプとして"Template Parameter" を指定します。
+    1. テンプレート内の環境変数が Parameter として読み込まれます。Updateをクリックします。
+  
+    ![UpdateParameter](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/UpdateParameter.png)
     
 
 
