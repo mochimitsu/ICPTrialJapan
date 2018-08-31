@@ -98,8 +98,8 @@ NFSサーバーのIPアドレスとパスを書き換えて「作成」をクリ
      |Name|AWS-SimpleVM-Scratch|
      |Description|AWS上にシンプルなVM環境を払出します。TerraformコードをCAM上で管理します|
      |Cloud Provider|AWS EC2|
-     
-    ![CreateTemplate](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/CreateTemplate.png)
+     <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/CreateTemplate.png" title="CreateTemplate" width="400">
+
     
 1. Template Metadata を以下のように記載し、保存します。
 
