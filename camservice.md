@@ -23,5 +23,5 @@
 1. Composition タブの確認
     1. 利用者が指定したパラメータ値と実際に払い出されるテンプレートのワークフローを作成することが可能です
     ここでは InstanceSizeの選択（梅構成、竹構成、松構成）に応じて、Templateに渡される InstanceTypeの値を変えています。
-       [!サービスの作成](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/servicecomposition.png)
+       ![サービスの作成](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/servicecomposition.png)
        
