@@ -15,6 +15,7 @@
 
 1. Overviewタブの確認　
     サービスの説明が記載されています。
+      ![サービスの概要](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/serviceoverview.png)
 1. Parameterタブの確認
     1. Service Parameters
         サービス利用者に指定してもらうパラメータが指定されています。テクニカルに必要な情報だけでなく、利用者氏名やメールアドレス、賦課部門コードなど、ビジネス上必要な情報も指定させることができます。
@@ -26,3 +27,8 @@
     ここでは InstanceSizeの選択（梅構成、竹構成、松構成）に応じて、Templateに渡される InstanceTypeの値を変えています。
        ![サービスの作成](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/servicecomposition.png)
        
+1. Plan & Forms 
+    1. プランを設定することで、１つの Service Composition の中で、選べるパラメータを制限することが可能です。
+    この例では、FREEPLANでは梅構成しか選べないようにしていますが、東京DCプラン、米国DC用プランと分けるなど、１つのService Composition を様々なプランに分けて構成することができます。
+       ![サービスのプラン](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/serviceplan.png)
+      
