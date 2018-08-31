@@ -2,8 +2,7 @@
 # Cloud Automation Manager
 
 ## 製品版CAM導入手順
-1. CAMのシステム要求を確認します。<br>
-　 [CAM System Requirement](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_requirements.html) <br>
+1. CAMのシステム要求を確認します。[CAM System Requirement](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_requirements.html) 
   ICPのシステム要求に加えて追加で必要になります（コア数、メモリ、ストレージ）
    
 1. (2.1.0.3環境のみ) [暫定修正の適用](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_prereq.html)
@@ -20,42 +19,57 @@
 
 1. HELMカタログの確認
   HELMカタログを開き、検索バーで cam を検索し、*local-repo* として、 *ibm-cam* が登録されていることを確認します。
-  
-  
+    
 ## CAM導入事前準備
 1. CAMの導入の前提となる PersistentVolume を４つ作成します。
-   1. それぞれの pvの定義ファイルをダウンロードし、NFSサーバーのIPアドレスとパスを書き換えます
-  cam-mongo-pv
-  cam-logs-pv
-  cam-terraform-pv
-  cam-bpd-appdata-pv
+     |pv名|用途|
+     |:-----:|:-----|
+     |cam-mongo-pv|CAMのデータが配置されるPersitenceVolume|
+     |cam-logs-pv|CAMのログが配置されるPersitenceVolume|
+     |cam-terraform-pv|CAMのterraformの作業ディレクトリが配置されるPersitenceVolume|
+     |cam-bpd-appdata-pv|GUIでのTerraformコード生成ツールのデータが配置されるPersitenceVolume|
+   
+  1. cam-mongo-pvの定義ファイル [cam-mongo-pv](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/cam-mongo-pv.yaml) を開き、NFSサーバーのIPアドレスとパスを書き換えます
+
+  1. ICPコンソールを開き、右上にある「リソースの作成」をクリックし、開いたウィザードにそれぞれのファイルの内容をペーストし「作成」をクリックします。
+  1. ICPコンソールから、プラットフォーム > ストレージ と開き、Persitence-Volume タブに cam-mongo-pv が available ステータスで作成されていることを確認します。
+  1. 同様に、 cam-logs-pv, cam-terraform-pv, cam-bpd-appdata-pv の残りの３つのpvも作成します。  
+      [cam-logs-pv](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/cam-logs-pv.yaml) ,
+      [cam-terraform-pv](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/cam-terraform-pv.yaml) ,
+      [cam-bpd-appdata-pv](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/cam-bpd-appdata-pv.yaml)
   
-  kubectl create -f <xxxxx-pv.yaml>
+  1. kubectl create -f <xxxxx-pv.yaml> でも PersitenceVolumeを生成することが可能です
+
+## Service ID API Key の生成
+1. OSの Terminal を開き、 [SErvice ID API Keyの生成](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_install_offline_EE.html) の手順で、Service ID API Keyを生成します。
  
- 
-1. HELMカタログにおいて、導入HELMチャートの選択
-  製品版をデプロイする場合は *local-repo* の ibm-cam V 1.3.1 を選択し、「構成」ボタンを押します。
-  トライアル版を利用する場合には *ibm-repo*の ibm-cam V1.3.1 を選択します、「構成」ボタンを押します。
+## CAM導入 
+1. HELMカタログにおいて、導入HELMチャートを選択します
+     - 製品版をデプロイする場合は *local-repo* の ibm-cam V1.3.1 を選択し、「構成」ボタンを押します。
+     - トライアル版を利用する場合には *ibm-repo*の ibm-cam V1.3.1 を選択します、「構成」ボタンを押します。
   
-1. HELM構成パラメータの指定
+1. 導入時にHELM構成パラメータを指定します。指定されたもの以外は デフォルト値のままで問題ありません。
 
   構成
-  
-
   |パラメータ名前|設定値|
   |:-----:|:-----|
   |リリース名| 任意の名前 |
-  |ターゲット名前空間| sevices |
+  |ターゲット名前空間| Services |
   |使用条件への同意| ライセンスを確認して同意してください |
   
   グローバル
-  
   |パラメータ名前|設定値|
   |:-----:|:-----|
-  |Image pull secret name| 任 |
-  |Deploy API key| |
+  |Image pull secret name|default|
+  |Product Identifier|既に指定されている場合にはデフォルトのままで問題ありません。指定されていない場合は、Product IDファイル（icp-cam-prod-id-2.1.0.3_06-27.txt）に記載されている内容をCOPY&PASTEします
+  |Deploy API key|Service ID API Keyの手順で生成したKeyを指定します|
   
 1. HELMのデプロイが完了するのを待ちます
+  1. ICPコンソールから HELM リリースを開きます
+  1. デプロイメント に含まれている CAMのマイクロサービスの各デプロイメントが Running ステータスとなっていることを確認します
+  1. Running となっていないデプロイメントが存在する場合は、当該デプロイメントのリンクをクリックし開きます。
+     各デプロイメントのページの下にある Pod のリンクを開き、Event および Logs を確認し、正常稼働の妨げになっている事象を確認します
+ 
 
 ## クラウド接続の定義（AWSを例に）
 1. CAMコンソールを Manage > Cloud Connections と開きます
