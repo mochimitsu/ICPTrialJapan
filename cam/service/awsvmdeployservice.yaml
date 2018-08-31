@@ -1,0 +1,247 @@
+{
+  "service": {
+    "specVersion": "v2",
+    "catalog_metadata": {
+      "name": "VM払出し[2018.06版]",
+      "description": "AWS上に、○○株式会社IT標準△△に準拠した、シンプルなVM環境を払出します。",
+      "longDescription": "AWS上に、○○株式会社IT標準△△に準拠した、シンプルなVM環境を払出します。 このテンプレートを利用することで、OS環境に関しては、社内IT標準△△を満たす環境を払い出すことができます。 各ミドルウェアに関しては、利用者の責任において、社内IT標準□□を遵守してください。",
+      "providerDisplayName": "",
+      "image": "serviceicon_9.svg",
+      "category": "AWS環境払出し",
+      "bullets": [
+        {
+          "title": "Cloud Provider",
+          "description": "Amazon Web Service"
+        }
+      ],
+      "author": "admin"
+    },
+    "tags": [],
+    "parameters": [
+      {
+        "name": "InstanceOwner",
+        "label": "インスタンス管理者",
+        "customtype": "string",
+        "type": "string",
+        "immutable": false,
+        "hidden": false,
+        "required": true,
+        "secured": false,
+        "description": "インスタンスの管理者名を指定してください"
+      },
+      {
+        "name": "OwnerMail",
+        "label": "インスタンス管理者メール",
+        "customtype": "string",
+        "type": "string",
+        "immutable": false,
+        "hidden": false,
+        "required": false,
+        "secured": false,
+        "description": "インスタンス管理者のメールアドレス"
+      },
+      {
+        "name": "ProjectCode",
+        "label": "賦課部門コード",
+        "customtype": "string",
+        "type": "string",
+        "immutable": false,
+        "hidden": false,
+        "required": true,
+        "secured": false,
+        "description": "７桁の賦課部門コードを記載ください"
+      },
+      {
+        "name": "Hostname",
+        "label": "ホスト名",
+        "customtype": "string",
+        "type": "string",
+        "immutable": false,
+        "hidden": false,
+        "required": true,
+        "secured": false,
+        "description": "払い出されるサーバーのホスト名を指定してください"
+      },
+      {
+        "name": "InstanceSize",
+        "label": "インスタンスサイズ",
+        "customtype": "string",
+        "type": "string",
+        "immutable": false,
+        "hidden": false,
+        "required": true,
+        "secured": false,
+        "options": [
+          {
+            "label": "梅構成",
+            "value": "t2.micro",
+            "default": false
+          },
+          {
+            "label": "竹構成",
+            "value": "t2.small",
+            "default": false
+          },
+          {
+            "label": "松構成",
+            "value": "t2.large",
+            "default": false
+          }
+        ],
+        "description": "松竹梅構成から選んでください"
+      }
+    ],
+    "flow": {
+      "conditions": [
+        {
+          "decision": {
+            "title": "SpecifyInstanceSize",
+            "options": [
+              {
+                "case": "梅構成",
+                "sequence": {
+                  "0": "awssimplaf7395be"
+                }
+              },
+              {
+                "case": "竹構成",
+                "sequence": {
+                  "0": "awssimplfa524ff2"
+                }
+              },
+              {
+                "case": "松構成",
+                "sequence": {
+                  "0": "awssimpl0139fad5",
+                  "1": "emailnot0a419d1c"
+                }
+              }
+            ],
+            "id": "decision88d9fc60",
+            "mapped_parameter": "${parameters.InstanceSize}",
+            "description": "インスタンスサイズの指定"
+          }
+        }
+      ],
+      "templates": [
+        {
+          "AWS-SimpleVM-File": {
+            "title": "AWS-SimpleVM-File_f07250",
+            "template_name": "AWS-SimpleVM-File",
+            "version": "v1.0.1",
+            "id": "awssimplaf7395be",
+            "template_type": "Terraform",
+            "template_content_type": "Amazon EC2",
+            "template_provider": "Amazon EC2",
+            "instance_name": "${parameters.Hostname}",
+            "cloud_connection_name": "Amazon",
+            "template_data_objects": {},
+            "template_params": {
+              "InstanceType": "t2.micro",
+              "KeyPair_Name": "mykey001",
+              "Aws_Subnet": "subnet-36e9b740",
+              "Public_SSHKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX44figYYj4SFj3R6uiZ2/CrwGktjY9nqxaZES6NXM1MNwYUHHZKpsf1lC/DaUpuvJpfHp3L/idfn1UXJYCseLA/syRmHvpPZL/EYdAAPAnOW1KgFNQbEo50R9B0+GImOZBKDKqWg8jp1d8lW9dW6EONF/q4dUqYgBHAI6aRG5GXSdYDPH+9HvfKgEMqSa2QJ8qsdp98UUvDDbsIjGLDq2gcAsa/jANAjuP/TFR+a/GxRmQWGmY8r4YHKXvVPHhM14hxNMnd4ZFSR1xmuPEkMtjvi7IOHdFX5nEymWKEXoJsoqtX9wHBlCK0sSzAOa9RF7uWiQW+IvjkEL+t2KGEsd"
+            },
+            "outputs": []
+          }
+        },
+        {
+          "AWS-SimpleVM-File": {
+            "title": "AWS-SimpleVM-File_47a9a6",
+            "template_name": "AWS-SimpleVM-File",
+            "version": "v1.0.1",
+            "id": "awssimplfa524ff2",
+            "template_type": "Terraform",
+            "template_content_type": "Amazon EC2",
+            "template_provider": "Amazon EC2",
+            "instance_name": "${parameters.Hostname}",
+            "cloud_connection_name": "Amazon",
+            "template_data_objects": {},
+            "template_params": {
+              "InstanceType": "t2.small",
+              "KeyPair_Name": "mykey001",
+              "Aws_Subnet": "subnet-36e9b740",
+              "Public_SSHKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX44figYYj4SFj3R6uiZ2/CrwGktjY9nqxaZES6NXM1MNwYUHHZKpsf1lC/DaUpuvJpfHp3L/idfn1UXJYCseLA/syRmHvpPZL/EYdAAPAnOW1KgFNQbEo50R9B0+GImOZBKDKqWg8jp1d8lW9dW6EONF/q4dUqYgBHAI6aRG5GXSdYDPH+9HvfKgEMqSa2QJ8qsdp98UUvDDbsIjGLDq2gcAsa/jANAjuP/TFR+a/GxRmQWGmY8r4YHKXvVPHhM14hxNMnd4ZFSR1xmuPEkMtjvi7IOHdFX5nEymWKEXoJsoqtX9wHBlCK0sSzAOa9RF7uWiQW+IvjkEL+t2KGEsd"
+            },
+            "outputs": []
+          }
+        },
+        {
+          "AWS-SimpleVM-File": {
+            "title": "AWS-SimpleVM-File_f524f4",
+            "template_name": "AWS-SimpleVM-File",
+            "version": "v1.0.1",
+            "id": "awssimpl0139fad5",
+            "template_type": "Terraform",
+            "template_content_type": "Amazon EC2",
+            "template_provider": "Amazon EC2",
+            "instance_name": "${parameters.Hostname}",
+            "cloud_connection_name": "Amazon",
+            "template_data_objects": {},
+            "template_params": {
+              "InstanceType": "t2.large",
+              "KeyPair_Name": "mykey001",
+              "Aws_Subnet": "subnet-36e9b740",
+              "Public_SSHKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX44figYYj4SFj3R6uiZ2/CrwGktjY9nqxaZES6NXM1MNwYUHHZKpsf1lC/DaUpuvJpfHp3L/idfn1UXJYCseLA/syRmHvpPZL/EYdAAPAnOW1KgFNQbEo50R9B0+GImOZBKDKqWg8jp1d8lW9dW6EONF/q4dUqYgBHAI6aRG5GXSdYDPH+9HvfKgEMqSa2QJ8qsdp98UUvDDbsIjGLDq2gcAsa/jANAjuP/TFR+a/GxRmQWGmY8r4YHKXvVPHhM14hxNMnd4ZFSR1xmuPEkMtjvi7IOHdFX5nEymWKEXoJsoqtX9wHBlCK0sSzAOa9RF7uWiQW+IvjkEL+t2KGEsd"
+            },
+            "outputs": []
+          }
+        }
+      ],
+      "resthooks": [],
+      "notifications": [
+        {
+          "emailnotification": {
+            "title": "松構成利用通知",
+            "type": "email",
+            "id": "emailnot0a419d1c",
+            "sender": "CAMadmin",
+            "receiverList": "cloudadmin@sample.jp",
+            "subject": "松構成が払い出されます",
+            "body": "松構成が払い出されます"
+          }
+        },
+        {
+          "emailnotification": {
+            "title": "払い出し完了通知",
+            "type": "email",
+            "id": "emailnot8cb14b50",
+            "sender": "CAMadmin",
+            "subject": "払い出しが完了しました",
+            "body": "払い出しが完了しました",
+            "receiverList": "$(OwnerMail)"
+          }
+        }
+      ],
+      "sequence": {
+        "0": "decision88d9fc60",
+        "1": "emailnot8cb14b50"
+      }
+    },
+    "plans": [
+      {
+        "name": "Standard",
+        "description": "標準プランです。指定されたプロジェクトコードに利用料が社内課金されます。",
+        "plan_parameters": []
+      },
+      {
+        "name": "Free",
+        "description": "無償で利用できるプランです",
+        "plan_parameters": [
+          {
+            "name": "ProjectCode",
+            "label": "賦課部門コード",
+            "customtype": "string",
+            "type": "string",
+            "immutable": true,
+            "hidden": true,
+            "required": false,
+            "secured": false,
+            "description": "７桁の賦課部門コードを記載ください",
+            "default": "FREEPLAN"
+          }
+        ]
+      }
+    ]
+  }
+}
