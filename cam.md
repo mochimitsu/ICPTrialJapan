@@ -2,11 +2,10 @@
 # Cloud Automation Manager の導入
 
 Cloud Automation Manager は、Terraform とChef をコア・エンジンとして、Infrastructure as Code のための環境をシンプルに提供します。
-- Terraform https://www.terraform.io/docs/index.html
-- Chef https://docs.chef.io/chef_overview.html
-
+    - Terraform https://www.terraform.io/docs/index.html
+    - Chef https://docs.chef.io/chef_overview.html
 製品が提供するサンプルのテンプレートは、以下で公開されています
-- CAM HUB Open https://github.com/IBM-CAMHub-Open/IBM-CAMHub-Open/blob/master/README.md
+    - CAM HUB Open https://github.com/IBM-CAMHub-Open/IBM-CAMHub-Open/blob/master/README.md
 
 
 
