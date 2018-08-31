@@ -15,7 +15,7 @@
    
 --------   
 ## カスタム・テンプレートの作成（ソースコード CAMローカル管理）
-テンプレートでは、IaaSなどの払い出しな必要な情報を Terraform というコードに落とします。
+テンプレートでは、IaaSなどの払い出しな必要な情報を Terraform というコードに落とします。<br>
 テンプレートを利用するユーザーは、主に技術者です。
 
 1. CAMコンソールから Library > Template を選択します
@@ -87,3 +87,7 @@
    1. GitHub Repository URL として https://github.com/ICpTrial/ICPTrialJapan/tree/master/cam/template を指定します
         <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/templategit.png" title="TemplateGit" width="400">
    1. Templateが生成されますので、先と同様にカスタマイズしていきます。
+
+
+引き続き、非技術者向けのユーザー・ビューである サービス を見ていきます。→ 
+[CAMの利用2] (https://github.com/ICpTrial/ICPTrialJapan/blob/master/camservice.md)
