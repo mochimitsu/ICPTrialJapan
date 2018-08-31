@@ -269,6 +269,24 @@
             "secured": false,
             "description": "７桁の賦課部門コードを記載ください",
             "default": "FREEPLAN"
+          },
+          {
+            "name": "InstanceSize",
+            "label": "インスタンスサイズ",
+            "customtype": "string",
+            "type": "string",
+            "immutable": false,
+            "hidden": false,
+            "required": true,
+            "secured": false,
+            "description": "Freeプランでは 梅構成のみです",
+            "options": [
+              {
+                "label": "梅構成",
+                "value": "t2.micro",
+                "default": false
+              }
+            ]
           }
         ]
       }
