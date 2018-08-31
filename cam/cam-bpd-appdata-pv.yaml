@@ -10,5 +10,5 @@ spec:
   accessModes:
      - ReadWriteMany
   nfs:
-    server: 10.132.75.98
+    server: <nfs-server-ip>
     path: /icpnfs/data/CAM_BPD_appdate
