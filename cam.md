@@ -4,19 +4,20 @@
 ## 製品版CAM前提条件確認
 1. CAMのシステム要求を確認します。[CAM System Requirement](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_requirements.html) <br>
   ICPのシステム要求に加えて追加で必要になります（コア数、メモリ、ストレージ）
-   
+
+1. kubectlコマンド、helmコマンド、bx prコマンドが構成されていることを確認します。
+     
 1. (2.1.0.3環境のみ) [暫定修正の適用](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_prereq.html) <br>
   弊社 FixCentral から helm-api-apikeys-2.1.0.3-20180626-9425.sh をダウンロードして適用します（MasterNodeで実行）。
-  
-  
+
 ## 製品版 CAM HELMチャートの登録
 
 1. ICPコマンド環境 および dockerレジストリへのログイン<br>
-  *bx pr login -a https://mycluster.icp:8443 --skip-ssl-validation*
-  *docker login mycluster.icp:8500*
+  `bx pr login -a https://mycluster.icp:8443 --skip-ssl-validation`
+  `docker login mycluster.icp:8500`
     
 1. HELMカタログへの製品イメージの登録<br>
-  *bx pr load-ppa-archive --archive icp-cam-x86_64-2.1.0.3_06-27.tar.gz --clustername mycluster.icp --namespace services*
+  `bx pr load-ppa-archive --archive icp-cam-x86_64-2.1.0.3_06-27.tar.gz --clustername mycluster.icp --namespace services`
   
 1. HELMカタログの同期<br>
   ICPコンソールから「管理」> 「リポジトリー」を開き、「リポジトリーの同期」をクリックします。
@@ -42,7 +43,7 @@ NFSサーバーのIPアドレスとパスを書き換えて「作成」をクリ
       [cam-terraform-pv](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/cam-terraform-pv.yaml) ,
       [cam-bpd-appdata-pv](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/cam-bpd-appdata-pv.yaml)
   
-  1. kubectl create -f <xxxxx-pv.yaml> でも PersitenceVolumeを生成することが可能です
+  * `kubectl create -f <xxxxx-pv.yaml> ` でも PersitenceVolumeを生成することが可能です
 
 ## Service ID API Key の生成
 1. OSの Terminal を開き、 [Service ID API Keyの生成](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_install_offline_EE.html) の手順で、Service ID API Keyを生成します。
