@@ -100,19 +100,19 @@
               {
                 "case": "梅構成",
                 "sequence": {
-                  "0": "awssimplaf7395be"
+                  "0": "awssimpl7144925e"
                 }
               },
               {
                 "case": "竹構成",
                 "sequence": {
-                  "0": "awssimplfa524ff2"
+                  "0": "awssimpl52a2405d"
                 }
               },
               {
                 "case": "松構成",
                 "sequence": {
-                  "0": "awssimpl0139fad5",
+                  "0": "awssimpl62f045fd",
                   "1": "emailnot0a419d1c"
                 }
               }
@@ -125,66 +125,96 @@
       ],
       "templates": [
         {
-          "AWS-SimpleVM-File": {
-            "title": "AWS-SimpleVM-File_f07250",
-            "template_name": "AWS-SimpleVM-File",
+          "AWS-SimpleVM-Scratch": {
+            "title": "AWS-SimpleVM-Scratch_6b72ef",
+            "template_name": "AWS-SimpleVM-Scratch",
             "version": "v1.0.1",
-            "id": "awssimplaf7395be",
+            "id": "awssimpl7144925e",
             "template_type": "Terraform",
             "template_content_type": "Amazon EC2",
             "template_provider": "Amazon EC2",
-            "instance_name": "${parameters.Hostname}",
+            "instance_name": "",
             "cloud_connection_name": "Amazon",
             "template_data_objects": {},
             "template_params": {
+              "Aws_Subnet": [
+                "subnet-9b8318c3"
+              ],
               "InstanceType": "t2.micro",
-              "KeyPair_Name": "mykey001",
-              "Aws_Subnet": "subnet-36e9b740",
-              "Public_SSHKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX44figYYj4SFj3R6uiZ2/CrwGktjY9nqxaZES6NXM1MNwYUHHZKpsf1lC/DaUpuvJpfHp3L/idfn1UXJYCseLA/syRmHvpPZL/EYdAAPAnOW1KgFNQbEo50R9B0+GImOZBKDKqWg8jp1d8lW9dW6EONF/q4dUqYgBHAI6aRG5GXSdYDPH+9HvfKgEMqSa2QJ8qsdp98UUvDDbsIjGLDq2gcAsa/jANAjuP/TFR+a/GxRmQWGmY8r4YHKXvVPHhM14hxNMnd4ZFSR1xmuPEkMtjvi7IOHdFX5nEymWKEXoJsoqtX9wHBlCK0sSzAOa9RF7uWiQW+IvjkEL+t2KGEsd"
+              "KeyPair_Name": "",
+              "Public_SSHKey": "",
+              "SecurityGroupID": [
+                "sg-7fa2d706"
+              ],
+              "azs": [
+                "ap-northeast-1c"
+              ]
             },
-            "outputs": []
+            "outputs": [
+              "message"
+            ]
           }
         },
         {
-          "AWS-SimpleVM-File": {
-            "title": "AWS-SimpleVM-File_47a9a6",
-            "template_name": "AWS-SimpleVM-File",
+          "AWS-SimpleVM-Scratch": {
+            "title": "AWS-SimpleVM-Scratch_88d6aa",
+            "template_name": "AWS-SimpleVM-Scratch",
             "version": "v1.0.1",
-            "id": "awssimplfa524ff2",
+            "id": "awssimpl52a2405d",
             "template_type": "Terraform",
             "template_content_type": "Amazon EC2",
             "template_provider": "Amazon EC2",
-            "instance_name": "${parameters.Hostname}",
+            "instance_name": "",
             "cloud_connection_name": "Amazon",
             "template_data_objects": {},
             "template_params": {
+              "Aws_Subnet": [
+                "subnet-9b8318c3"
+              ],
               "InstanceType": "t2.small",
-              "KeyPair_Name": "mykey001",
-              "Aws_Subnet": "subnet-36e9b740",
-              "Public_SSHKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX44figYYj4SFj3R6uiZ2/CrwGktjY9nqxaZES6NXM1MNwYUHHZKpsf1lC/DaUpuvJpfHp3L/idfn1UXJYCseLA/syRmHvpPZL/EYdAAPAnOW1KgFNQbEo50R9B0+GImOZBKDKqWg8jp1d8lW9dW6EONF/q4dUqYgBHAI6aRG5GXSdYDPH+9HvfKgEMqSa2QJ8qsdp98UUvDDbsIjGLDq2gcAsa/jANAjuP/TFR+a/GxRmQWGmY8r4YHKXvVPHhM14hxNMnd4ZFSR1xmuPEkMtjvi7IOHdFX5nEymWKEXoJsoqtX9wHBlCK0sSzAOa9RF7uWiQW+IvjkEL+t2KGEsd"
+              "KeyPair_Name": "",
+              "Public_SSHKey": "",
+              "SecurityGroupID": [
+                "sg-7fa2d706"
+              ],
+              "azs": [
+                "ap-northeast-1c"
+              ]
             },
-            "outputs": []
+            "outputs": [
+              "message"
+            ]
           }
         },
         {
-          "AWS-SimpleVM-File": {
-            "title": "AWS-SimpleVM-File_f524f4",
-            "template_name": "AWS-SimpleVM-File",
+          "AWS-SimpleVM-Scratch": {
+            "title": "AWS-SimpleVM-Scratch_63e531",
+            "template_name": "AWS-SimpleVM-Scratch",
             "version": "v1.0.1",
-            "id": "awssimpl0139fad5",
+            "id": "awssimpl62f045fd",
             "template_type": "Terraform",
             "template_content_type": "Amazon EC2",
             "template_provider": "Amazon EC2",
-            "instance_name": "${parameters.Hostname}",
+            "instance_name": "",
             "cloud_connection_name": "Amazon",
             "template_data_objects": {},
             "template_params": {
+              "Aws_Subnet": [
+                "subnet-9b8318c3"
+              ],
               "InstanceType": "t2.large",
-              "KeyPair_Name": "mykey001",
-              "Aws_Subnet": "subnet-36e9b740",
-              "Public_SSHKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX44figYYj4SFj3R6uiZ2/CrwGktjY9nqxaZES6NXM1MNwYUHHZKpsf1lC/DaUpuvJpfHp3L/idfn1UXJYCseLA/syRmHvpPZL/EYdAAPAnOW1KgFNQbEo50R9B0+GImOZBKDKqWg8jp1d8lW9dW6EONF/q4dUqYgBHAI6aRG5GXSdYDPH+9HvfKgEMqSa2QJ8qsdp98UUvDDbsIjGLDq2gcAsa/jANAjuP/TFR+a/GxRmQWGmY8r4YHKXvVPHhM14hxNMnd4ZFSR1xmuPEkMtjvi7IOHdFX5nEymWKEXoJsoqtX9wHBlCK0sSzAOa9RF7uWiQW+IvjkEL+t2KGEsd"
+              "KeyPair_Name": "",
+              "Public_SSHKey": "",
+              "SecurityGroupID": [
+                "sg-7fa2d706"
+              ],
+              "azs": [
+                "ap-northeast-1c"
+              ]
             },
-            "outputs": []
+            "outputs": [
+              "message"
+            ]
           }
         }
       ],
