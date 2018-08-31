@@ -145,10 +145,17 @@ NFSサーバーのIPアドレスとパスを書き換えて「作成」をクリ
        |azs|Availability Zone|
    
    1. 「Deploy」をクリックします。インスタンスのデプロイが開始されますので、デプロイの状況を確認します。
+   
        <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/deployment.png" title="SampleTemplate" width="400">
        <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/deploysuccess.png" title="SampleTemplate" width="400">
-   デプロイに失敗した場合は、「Log File」タブを確認し、Terraformが出力するメッセージを確認してください。
-   1. パラメータの誤りであれば「Modify」タブをクリックして、Edit Parameters でパラメータを更新し、Applyし再度デプロイしてください。
    
-
-
+   1. デプロイに失敗した場合は「Log File」タブを確認し、Terraformが出力するメッセージを確認してください。
+      パラメータの誤りであれば「Modify」タブをクリックして、Edit Parameters でパラメータを更新し、Applyし再度デプロイしてください。
+   
+## カスタム・テンプレートの作成（ソースコード GIT管理）
+1. CAMコンソールから Library > Template を選択します
+1. Create Template をクリックします
+   1. GitHub を選択します
+   1. GitHub Repository URL として https://github.com/ICpTrial/ICPTrialJapan/tree/master/cam/template を指定します
+        <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/templategit.png" title="TemplateGit" width="400">
+   1. Templateが生成されますので、先と同様にカスタマイズしていきます。
