@@ -4,6 +4,7 @@
 Cloud Automation Manager は、Terraform とChef をコア・エンジンとして、Infrastructure as Code のための環境をシンプルに提供します。
 - Terraform https://www.terraform.io/docs/index.html
 - Chef https://docs.chef.io/chef_overview.html <br>
+
 製品が提供するサンプルのテンプレートは、以下で公開されています
 - CAM HUB Open https://github.com/IBM-CAMHub-Open/IBM-CAMHub-Open/blob/master/README.md
 
@@ -83,3 +84,7 @@ NFSサーバーのIPアドレスとパスを書き換えて「作成」をクリ
   1. デプロイメント に含まれている CAMのマイクロサービスの各デプロイメントが Running ステータスとなっていることを確認します
   1. Running となっていないデプロイメントが存在する場合は、当該デプロイメントのリンクをクリックし開きます。
      各デプロイメントのページの下にある Pod のリンクを開き、Event および Logs を確認し、正常稼働の妨げになっている事象を確認します
+     
+     
+ ### さっそく、CAMを利用してみましょう [CAMの利用１](https://github.com/ICpTrial/ICPTrialJapan/blob/master/camtemplate.md)
+     
