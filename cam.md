@@ -6,7 +6,7 @@
   ICPのシステム要求に加えて追加で必要になります（コア数、メモリ、ストレージ）
    
 1. (2.1.0.3環境のみ) [暫定修正の適用](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_prereq.html) <br>
-  弊社 FixCentral から helm-api-apikeys-2.1.0.3-20180626-9425.sh をダウンロードして適用します。
+  弊社 FixCentral から helm-api-apikeys-2.1.0.3-20180626-9425.sh をダウンロードして適用します（MasterNodeで実行）。
   
   
 ## 製品版 CAM HELMチャートの登録
