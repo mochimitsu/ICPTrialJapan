@@ -30,9 +30,8 @@
      |cam-terraform-pv|CAMのterraformの作業ディレクトリが配置されるPersitenceVolume|
      |cam-bpd-appdata-pv|GUIでのTerraformコード生成ツールのデータが配置されるPersitenceVolume|
    
-  1. cam-mongo-pvの定義ファイル [cam-mongo-pv](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/cam-mongo-pv.yaml) を開き、NFSサーバーのIPアドレスとパスを書き換えます
-
-  1. ICPコンソールを開き、右上にある「リソースの作成」をクリックし、開いたウィザードにそれぞれのファイルの内容をペーストし「作成」をクリックします。
+  1. cam-mongo-pvの定義ファイル [cam-mongo-pv](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/cam-mongo-pv.yaml) を開き、内容をコピーします。ICPコンソールを開き、右上にある「リソースの作成」をクリックし、開いたウィザードに、それぞれのファイルの内容をペーストします。
+NFSサーバーのIPアドレスとパスを書き換えて「作成」をクリックします。
   1. ICPコンソールから、プラットフォーム > ストレージ と開き、Persitence-Volume タブに cam-mongo-pv が available ステータスで作成されていることを確認します。
   1. 同様に、 cam-logs-pv, cam-terraform-pv, cam-bpd-appdata-pv の残りの３つのpvも作成します。  
       [cam-logs-pv](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/cam-logs-pv.yaml) ,
@@ -47,7 +46,7 @@
 ## CAM導入 
 1. HELMカタログにおいて、導入HELMチャートを選択します
      - 製品版をデプロイする場合は *local-repo* の ibm-cam V1.3.1 を選択し、「構成」ボタンを押します。
-     - トライアル版を利用する場合には *ibm-repo*の ibm-cam V1.3.1 を選択します、「構成」ボタンを押します。
+     - トライアル版を利用する場合には *ibm-repo*の ibm-cam V1.3.1 を選択し、「構成」ボタンを押します。
   
 1. 導入時にHELM構成パラメータを指定します。指定されたもの以外は デフォルト値のままで問題ありません。
 
