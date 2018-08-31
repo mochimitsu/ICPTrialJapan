@@ -15,12 +15,12 @@
 1. CAMコンソールから Library > Template を選択します
 1. Create Template をクリックします
    1. From Scratch を選択します
-   1. 設定として、以下を記載します（任意にカスタマイズして頂いてかまいません）
+   1. 設定として、以下を記載します
    
      |パラメータ名前|設定値|
      |:-----:|:-----|
      |Name|AWS-SimpleVM-Scratch|
-     |Description|AWS上にシンプルなVM環境を払出します。TerraformコードをCAM上で管理します|
+     |Description|AWS上にシンプルなVM環境を払出します。TerraformコードをCAM上で管理します（※任意にカスタマイズして頂いてかまいません）|
      |Cloud Provider|AWS EC2|
      <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/CreateTemplate.png" title="CreateTemplate" width="400">
 
