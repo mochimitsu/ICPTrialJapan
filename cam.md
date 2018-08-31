@@ -137,6 +137,18 @@ NFSサーバーのIPアドレスとパスを書き換えて「作成」をクリ
    |:------:|:-------|
    |InstanceName|テンプレートで払い出されるシステム・インスタンスのCAM上の管理名を指定します|
    |CloudConnection|定義されたAWSのクラウド接続を選択します。複数作成した場合は適切なものを選んでください|
-   |Aws_Subnet|サンプルではリストにしています。適切なSubnetのみを残して他を☓で消します
+   |Aws_Subnet|サンプルではリストにしています。適切なSubnetのみを残して他を☓で消します|
+   |InstanceType|払い出す EC2インスタンスのタイプを指定します t2.nano t2.micro t2.large など|
+   |KeyPair_Name|任意のカギ名|
+   |Public_SSHKey|インスタンスのSSHログインに利用する公開鍵( ssh-rsa AAAAXXXXX....)|
+   |SecurityGroupID|払い出し先セキュリティ・グループ|
+   |azs|Availability Zone|
+   
+   1. 「Deploy」をクリックします。インスタンスのデプロイが開始されますので、デプロイの状況を確認します。
+   <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/deployment.png" title="SampleTemplate" width="400">
+   <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/deploysuccess.png" title="SampleTemplate" width="400">
+   デプロイに失敗した場合は、「Log File」タブを確認し、Terraformが出力するメッセージを確認してください。
+   1. パラメータの誤りであれば「Modify」タブをクリックして、Edit Parameters でパラメータを更新し、Applyし再度デプロイしてください。
+   
 
 
