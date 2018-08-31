@@ -1,12 +1,16 @@
 
 # Cloud Automation Manager
 
-## 製品版CAM導入手順
+## 製品版CAM前提条件確認
 1. CAMのシステム要求を確認します。[CAM System Requirement](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_requirements.html) <br>
   ICPのシステム要求に加えて追加で必要になります（コア数、メモリ、ストレージ）
    
 1. (2.1.0.3環境のみ) [暫定修正の適用](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_prereq.html) <br>
   弊社 FixCentral から helm-api-apikeys-2.1.0.3-20180626-9425.sh をダウンロードして適用します。
+  
+  
+## 製品版 CAM HELMチャートの登録
+
 1. ICPコマンド環境 および dockerレジストリへのログイン<br>
   *bx pr login -a https://mycluster.icp:8443 --skip-ssl-validation*
   *docker login mycluster.icp:8500*
