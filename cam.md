@@ -1,6 +1,14 @@
 
 # Cloud Automation Manager
 
+Cloud Automation Manager は、Terraform とChef をコア・エンジンとして、Infrastructure as Code のための環境をシンプルに提供します。
+- Terraform https://www.terraform.io/docs/index.html
+- Chef https://docs.chef.io/chef_overview.html
+
+製品が提供するサンプルのテンプレートは、以下で公開されています
+- CAM HUB Open https://github.com/IBM-CAMHub-Open/IBM-CAMHub-Open/blob/master/README.md
+
+
 ## 製品版CAM前提条件確認
 1. CAMのシステム要求を確認します。[CAM System Requirement](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_requirements.html) <br>
   ICPのシステム要求に加えて追加で必要になります（コア数、メモリ、ストレージ）
