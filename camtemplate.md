@@ -1,6 +1,3 @@
-
- 
-
 ## クラウド接続の定義（AWSを例に）
 1. CAMコンソールを Manage > Cloud Connections と開きます
 1. Create Connections をクリックします
@@ -10,6 +7,9 @@
    1. Description に 任意の備考を記載します (テスト用など）
    1. AWS の 接続情報を設定します （Access Key ID, Secret Access Key)
    1. リージョンには Asia Pacific (Tokyo) Region をハンズオンでは選びます
+   
+   
+--------   
  
 ## カスタム・テンプレートの作成（ソースコード CAMローカル管理）
 1. CAMコンソールから Library > Template を選択します
@@ -52,7 +52,6 @@
     1. 保存します。
 
 ## テンプレートを利用した払い出し
-    
    1. Template のメニューから作成した "AWS-Simple-VM-Scratch" を選択します。
    1. 右下にある「Deploy Template」をクリックします。
    1. デプロイ先環境およびテンプレート・パラメータを指定します。ご用意頂いた AWSのテスト環境にあわせて、設定してください。
