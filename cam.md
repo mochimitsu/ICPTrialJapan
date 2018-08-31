@@ -9,12 +9,14 @@ Cloud Automation Manager は、Terraform とChef をコア・エンジンとし�
 - CAM HUB Open https://github.com/IBM-CAMHub-Open/IBM-CAMHub-Open/blob/master/README.md
 
 
-このハンズオンは３ステップからなります
-[CAMの導入](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam.md)
-[CAMの利用１](https://github.com/ICpTrial/ICPTrialJapan/blob/master/camtemplate.md)　：CloudConnctionの定義、Templateの開発
-[CAMの利用２](https://github.com/ICpTrial/ICPTrialJapan/blob/master/camservice.md)　：Service の開発
-[CAMの利用３](https://github.com/ICpTrial/ICPTrialJapan/blob/master/bpd.md)　Blueprint Designerの利用
+このハンズオンは４ステップからなります
 
+| [CAMの導入](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam.md)|
+| [CAMの利用１](https://github.com/ICpTrial/ICPTrialJapan/blob/master/camtemplate.md) | CloudConnctionの定義、Templateの開発|
+| [CAMの利用２](https://github.com/ICpTrial/ICPTrialJapan/blob/master/camservice.md)　|Serviceの開発|
+|[CAMの利用３](https://github.com/ICpTrial/ICPTrialJapan/blob/master/bpd.md) |Blueprint Designerの利用|
+
+---------
 
 ## 製品版CAM前提条件確認
 1. CAMのシステム要求を確認します。[CAM System Requirement](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_requirements.html) <br>
