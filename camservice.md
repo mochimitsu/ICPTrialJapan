@@ -19,6 +19,7 @@
     1. Service Parameters
         サービス利用者に指定してもらうパラメータが指定されています。テクニカルに必要な情報だけでなく、利用者氏名やメールアドレス、賦課部門コードなど、ビジネス上必要な情報も指定させることができます。
         また、Instance Sizeでは、t2.nano t2.micro などテクニカルな表現ではなく、梅構成、竹構成、松構成など、ユーザーに分かりやすい表現で指定させています。
+      ![サービスのパラメータ](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/serviceparameters.png)
        
 1. Composition タブの確認
     1. 利用者が指定したパラメータ値と実際に払い出されるテンプレートのワークフローを作成することが可能です
