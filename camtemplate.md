@@ -87,6 +87,7 @@
    1. GitHub Repository URL として https://github.com/ICpTrial/ICPTrialJapan/tree/master/cam/template を指定します
         <img src="https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/templategit.png" title="TemplateGit" width="400">
    1. Templateが生成されますので、先と同様にカスタマイズしていきます。
+   1. カスタマイズが完了したら、先程と同様に実際にデプロイしてみてください。
 
 
 引き続き、非技術者向けのユーザー・ビューである サービス を見ていきます。→ 
