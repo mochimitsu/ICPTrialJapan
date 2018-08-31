@@ -1,3 +1,5 @@
+※ 作成中
+
 ## BluePrint Designer の利用
 Terraform コードを開発する際にGUIツールを利用することができます
 
