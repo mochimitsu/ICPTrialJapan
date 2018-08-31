@@ -2,6 +2,11 @@
 # Cloud Automation Manager
 
 ## 製品版CAM導入手順
+1. CAMのシステム要求を確認します。ICPのシステム要求に加えて追加で必要になります（コア数、メモリ、ストレージ）<br>
+　 [CAM System Requirement](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_requirements.html)
+   
+1. (2.1.0.3環境のみ) [暫定修正適用](https://www.ibm.com/support/knowledgecenter/en/SS2L37_2.1.0.3/cam_prereq.html)
+
 1. ICPコマンド環境 および dockerレジストリへのログイン<br>
   *bx pr login -a https://mycluster.icp:8443 --skip-ssl-validation*
   *docker login mycluster.icp:8500*
