@@ -1,14 +1,14 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: cam-logs-pv
-  labels:
-    type: cam-logs
+   name: cam-terraform-pv
+   labels:
+     type: cam-terraform
 spec:
   capacity:
-    storage: 10Gi
+     storage: 15Gi
   accessModes:
      - ReadWriteMany
   nfs:
     server: 10.132.75.98
-    path: /icpnfs/data/CAM_logs
+    path: /icpnfs/data/CAM_terraform
