@@ -11,7 +11,7 @@ Cloud Automation Manager は、Terraform とChef をコア・エンジンとし�
 
 このハンズオンは４ステップからなります
 
-| [CAMの導入](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam.md)|
+| [CAMの導入](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam.md)| HELM登録、CAM導入 |
 | [CAMの利用１](https://github.com/ICpTrial/ICPTrialJapan/blob/master/camtemplate.md) | CloudConnctionの定義、Templateの開発|
 | [CAMの利用２](https://github.com/ICpTrial/ICPTrialJapan/blob/master/camservice.md)　|Serviceの開発|
 |[CAMの利用３](https://github.com/ICpTrial/ICPTrialJapan/blob/master/bpd.md) |Blueprint Designerの利用|
