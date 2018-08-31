@@ -123,9 +123,9 @@ NFSサーバーのIPアドレスとパスを書き換えて「作成」をクリ
     1. "Update Parameters" をクリックします。インポート・タイプとして"Template Parameter" を指定します。
     1. テンプレート内の環境変数が Parameter として読み込まれます。Updateをクリックします。
   
-    ![UpdateParameter](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/UpdateParameter.png)
+      ![UpdateParameter](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/UpdateParameter.png)
     
-
+    1. 保存します。
 
 
 
