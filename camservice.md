@@ -6,7 +6,7 @@
 1. Create Service をクリックします。ServiceNameに「VM払出し」を指定し、Categoryに先程作成した「AWS環境払出し」カテゴリを指定し、「Create」をクリックします。
 1. サービスの定義画面が開きます。通常はテンプレートの時と同様１つずつ開発を行っていきますが、ハンズオンでの作業効率化のため既に定義が行われたソースを読み込みペーストします。
    [定義済みファイル](https://raw.githubusercontent.com/ICpTrial/ICPTrialJapan/master/cam/service/awsvmdeployservice.yaml) をクリックして内容をコピーします。
-1. 定義画面の Source Code を選択し、コピーした内容を貼り付け、一旦保管します。
+1. 定義画面の Source Code を選択し、コピーした内容を貼り付け、一旦保管します。 ※ サービスファイル中身一部見直し中
    ![サービスのインポート](https://github.com/ICpTrial/ICPTrialJapan/blob/master/cam/pics/ServiceImport.png)
 
 
